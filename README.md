@@ -1,5 +1,12 @@
+Proyecto de Cafeterias
+***
++ 2 clases: Cafe, Cafeteria
++ Se implementaran Arraylist
+
+
+------------------
 #Analisis de dependencias, proyecto Cafeteria
------
+*
 Extension del proyecto de Cafeteria con el uso de Visual Paradigm 
 
 *-Como se detalla en el diagrama de clases, en la cafeteria existen relaciones de clases de asociacion*
