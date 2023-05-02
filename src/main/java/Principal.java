@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Scanner;
+
 
 public class Principal {
     public static void main(String[] args) {
@@ -9,19 +9,25 @@ public class Principal {
     public static void inicializar() {
         ArrayList <Cafe> cafes = new ArrayList<>();
         ArrayList <String> RRSS =  new ArrayList<>();
-        Cafeteria cafeteria1 = new Cafeteria("CafesiN", "Las ballenas, 1313", RRSS, cafes);
-        System.out.println(cafeteria1);
-        cafeteria1.agregarCafe("Arabigo", 20, 50, "Chico");
-        System.out.println(cafeteria1);
-        cafeteria1.agregarCafe("Irlandes", 10, 70, "Grande");
-        System.out.println(cafeteria1);
-    }
-    public static String validarTexto () {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese solo texto");
-        String texto = "";
-        while (true){
+        Cafeteria cafeteria1 = new Cafeteria("CafesiN", "Las ballenas, 1313",RRSS , cafes);
+        cafeteria1.agregarRRSS("instaaaaa");
+        cafeteria1.agregarRRSS("facebook");
+        System.out.println(cafeteria1);   // se imprime la cafeteria, sin los cafes, solo sus datos y Redes sociales
 
-        }
+        cafeteria1.buscarCafePorNombre("Arabigo");      // se busca un cafe, pero como no hay cafes, nos avisa
+        cafeteria1.agregarCafe("Arabigo", 20, 50, "Chico"); // se agrega cafe
+        System.out.println(cafeteria1);
+        cafeteria1.agregarCafe("Irlandes", 10, 70, "Grande");  //se agrega cafe
+        System.out.println(cafeteria1);
+
+        cafeteria1.buscarCafePorNombre("Arabigo");   // se busca en los cafes existentes
+        cafeteria1.buscarCafePorNombre("irlandes");   // se puede buscar sin necesidad de un mayuscula al principio
+        cafeteria1.buscarCafePorNombre("cafecafe");   //nos arroja que no esta ese cafe
+
+        cafeteria1.eliminarCafePorNombre("irlandes");
+        cafeteria1.eliminarCafePorNombre("arabiccccco");   // se intenta borrar pero no esta ese cafe
+        cafeteria1.eliminarCafePorNombre("arabiGO");     // a pesar de mayusculas desordenadas, lo borra
+        System.out.println(cafeteria1);
     }
+
 }
