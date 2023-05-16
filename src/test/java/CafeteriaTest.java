@@ -61,6 +61,5 @@ class CafeteriaTest {
         String buscar = cafeteria.buscarCafePorNombre("rojo");
         String esperado = "rojo";
         Assertions.assertEquals(esperado, buscar);
-
     }
 }

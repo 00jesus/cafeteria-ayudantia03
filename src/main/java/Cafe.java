@@ -24,7 +24,6 @@ public class Cafe {
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-
     public int getGramosCafe() {
         return gramosCafe;
     }
