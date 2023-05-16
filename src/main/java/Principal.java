@@ -7,9 +7,10 @@ public class Principal {
 
     }
     public static void inicializar() {
-        ArrayList<Cafe> cafes = new ArrayList<>();
-        ArrayList<String> RRSS = new ArrayList<>();
-        Cafeteria cafeteria1 = new Cafeteria("CafesiN", "Las ballenas, 1313", RRSS, cafes);
+        ArrayList <Cafe> cafes = new ArrayList<>();
+        ArrayList <String> RRSS =  new ArrayList<>();
+        ArrayList <Alfajor> alfajores = new ArrayList<>();
+        Cafeteria cafeteria1 = new Cafeteria("CafesiN", "Las ballenas, 1313",RRSS , cafes, alfajores);
         cafeteria1.agregarRRSS("instaaaaa");
         cafeteria1.agregarRRSS("facebook");
         System.out.println(cafeteria1);   // se imprime la cafeteria, sin los cafes, solo sus datos y Redes sociales
@@ -28,7 +29,16 @@ public class Principal {
         cafeteria1.eliminarCafePorNombre("arabiccccco");   // se intenta borrar pero no esta ese cafe
         cafeteria1.eliminarCafePorNombre("arabiGO");     // a pesar de mayusculas desordenadas, lo borra
         System.out.println(cafeteria1);
-
+        //------------------------------------------------------------------------
+        System.out.println("--");
+        //lista cafe esta vacia desde aqui
+        System.out.println(cafeteria1);
+        cafeteria1.agregarAlfajor("manjar", "Chico", "Alemania");
+        System.out.println(cafeteria1);
+        cafeteria1.buscarAlfajorPorSabor("Manjar");
+        cafeteria1.buscarAlfajorPorSabor("aaaaa");
+        cafeteria1.eliminarAlfajorPorSabor("manjar");
+        System.out.println(cafeteria1);
     }
 
 }
